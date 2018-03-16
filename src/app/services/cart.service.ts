@@ -3,12 +3,13 @@ import { Food } from './food';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class CartService {
   cartUrl = 'api/cart';
   cartItem = <Cart>{};
-  cartCount = 0;
+  cartCount = new BehaviorSubject<number>(0);
 
   constructor(private httpClient: HttpClient) { }
 
@@ -25,7 +26,7 @@ export class CartService {
       this.cartItem.id = cart.length + 1;
       this.cartItem.itemId = item.id;
       this.cartItem.price = item.price;
-      this.cartCount = this.cartItem.id;
+      this.cartCount.next(this.cartItem.id);
       this.httpClient.put(this.cartUrl, this.cartItem, httpOptions).subscribe();
     });
   }

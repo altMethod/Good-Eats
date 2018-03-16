@@ -17,10 +17,7 @@ export class AppComponent implements OnInit {
   cartCount: Observable<number>;
 
   constructor(public cartService: CartService) {
-
-    this.cartCount = Observable
-      .interval(1000)
-      .map(res => this.cartService.cartCount);
+    this.cartCount = this.cartService.cartCount;
   }
 
   ngOnInit() {
