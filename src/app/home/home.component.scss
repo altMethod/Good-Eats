@@ -1,0 +1,41 @@
+.card.card-cascade.wider {
+    background-color: transparent;
+    box-shadow: none !important;
+}
+
+.card.card-cascade.wider .view {
+    z-index: 2;
+    border-radius: 4px;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+}
+
+.card.card-cascade.wider.reverse .card-body {
+    z-index: 3;
+    margin-top: -5rem;
+    border-radius: 4px;
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    margin-left: 4%;
+    margin-right: 4%;
+    background: #fff;
+}
+
+.view img {
+    max-height: 500px;
+    width: 100%;
+}
+
+.btn-fb {
+    background-color: #3b5998 !important;
+}
+
+.btn-tw {
+    background-color: #00aced !important;
+}
+
+.btn-gplus {
+    background-color: #dd4b39 !important;
+}
+
+.btn-insta {
+    background-color: #bc2a8d !important;
+}

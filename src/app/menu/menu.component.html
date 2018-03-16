@@ -1,0 +1,116 @@
+<div mdbModal #modal="mdb-modal" class="modal fade" id="centralModalSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="heading lead">{{ foodSelected.title }}</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="modal.hide()">
+          <span aria-hidden="true" class="white-text">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="media">
+          <img class="d-flex mr-5" [src]="foodSelected.img" [alt]="foodSelected.alt">
+          <div class="media-body">
+            {{ foodSelected.description }}
+          </div>
+        </div>
+        <div class="price pt-0 text-right">
+          <h6 class="green-text">{{ foodSelected.price }}</h6>
+        </div>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <a type="button" class="btn btn-primary-modal waves-light" (click)="addItem(foodSelected)" mdbRippleRadius>
+          <i class="fa fa-shopping-basket left mb-1"></i>
+          Add to order
+        </a>
+        <a type="button" class="btn btn-outline-secondary-modal" data-dismiss="modal" (click)="modal.hide()" mdbRippleRadius>No, thanks</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Section heading-->
+<h2 class="h1 mt-5 text-center menu-border pb-5">Fan Favorites</h2>
+<div class="row">
+  <app-loader class="mx-auto">Loading...</app-loader>
+</div>
+<!--Grid row-->
+<div class="row text-left menu-border">
+  <!--Grid column-->
+  <div class="col-lg-6 col-md-12 mt-5">
+
+    <!--Small news-->
+    <div class="menu-item" *ngFor="let foodItem of foodItems | slice:0:4">
+
+      <div class="row" (click)="showModal(foodItem.id)">
+        <div class="col-md-3">
+          <!--Image-->
+          <div mdbRippleRadius class="view overlay hm-white-slight waves-light">
+            <img [src]="foodItem.img" [alt]="foodItem.alt">
+            <a (click)="showModal(foodItem.id)">
+              <div class="mask"></div>
+            </a>
+          </div>
+        </div>
+
+        <!--Excerpt-->
+        <div class="col-md-9">
+          <a>
+            <p>
+              <strong>{{ foodItem.title }}</strong>
+            </p>
+            {{ foodItem.description }}
+            <!--Price-->
+            <div class="price pt-0 text-right">
+              <h6>{{ foodItem.price }}</h6>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <!--/Small news-->
+
+  </div>
+  <!--Grid column-->
+
+  <!--Grid column-->
+  <div class="col-lg-6 col-md-12 mt-5">
+
+    <!--Small news-->
+    <div class="menu-item" *ngFor="let foodItem of foodItems | slice:4:9">
+
+      <div class="row" (click)="showModal(foodItem.id)">
+        <div class="col-md-3">
+          <!--Image-->
+          <div mdbRippleRadius class="view overlay hm-white-slight waves-light">
+            <img [src]="foodItem.img" [alt]="foodItem.alt">
+            <a (click)="showModal(foodItem.id)">
+              <div class="mask"></div>
+            </a>
+          </div>
+        </div>
+
+        <!--Excerpt-->
+        <div class="col-md-9">
+          <a>
+            <p>
+              <strong>{{ foodItem.title }}</strong>
+            </p>
+            {{ foodItem.description }}
+            <!--Price-->
+            <div class="price pt-0 text-right">
+              <h6>{{ foodItem.price }}</h6>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <!--/Small news-->
+
+  </div>
+  <!--Grid column-->
+
+</div>

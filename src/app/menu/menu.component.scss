@@ -1,0 +1,51 @@
+.menu-item {
+    min-height: 142px;
+    border-bottom: 1px dotted #e0e0e0;
+    margin-bottom: 1.5rem;
+}
+
+.menu-item:last-of-type {
+    border-bottom: none;
+    padding-bottom: 10px;
+}
+
+.menu-item .view {
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+}
+
+.menu-item img {
+    max-height: 75px;
+    border-radius: 3px;
+}
+
+.menu-border {
+    border-bottom: 5px solid #3F729B;
+    margin-bottom: 20px;
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+.price h6:before {
+    content: "$";
+    font-size: 12px;
+    position: absolute;
+    margin-left: -0.5rem;
+}
+
+.btn-outline-secondary-modal {
+    border: 2px solid #3F729B;
+    color: #3F729B !important;
+    background-color: transparent;
+}
+
+.btn-primary-modal,
+.modal-header {
+    background-color: #3F729B;
+    color: #fff;
+}
+
+.media img {
+    max-width: 300px;
+    max-height: 400px;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+}

@@ -1,0 +1,83 @@
+<!--Main Navigation-->
+<header>
+  <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark unique-color scrolling-navbar intro-fixed-nav" [containerInside]="true">
+    <logo>
+      <a class="logo navbar-brand" href="#">
+        <strong>{{ title }}</strong>
+      </a>
+    </logo>
+    <links>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active waves-light" mdbRippleRadius>
+          <a class="nav-link">
+            <i class="fa fa-home left "></i>
+            Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item waves-light" mdbRippleRadius>
+            <a class="nav-link">
+              <i class="fa fa-cutlery left"></i>
+              Menu
+            </a>
+          </li>
+        <li class="nav-item waves-light" mdbRippleRadius>
+          <a class="nav-link">
+            <i class="fa fa-location-arrow left"></i>
+            Locations
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item waves-light" mdbRippleRadius>
+          <a class="nav-link" (click)="toggleLogin()">
+            <span *ngIf="!name" class="animated fadeIn"><i class="fa fa-sign-in left" ></i>Login / Register</span>
+            <span *ngIf="name" class="animated fadeIn">{{ name }}</span>
+          </a>
+        </li>
+        <li class="nav-item waves-light mr-5" mdbRipplesRadius>
+          <a class="nav-link"><i class="fa fa-shopping-cart" > {{ cartCount | async }}</i></a>
+        </li>
+      </ul>
+    </links>
+  </mdb-navbar>
+</header>
+<!--Main Navigation-->
+
+<!--Page Content-->
+<main>
+  <router-outlet></router-outlet>
+</main>
+<!--Page Content-->
+
+<!--Footer-->
+<footer class="page-footer unique-color center-on-small-only">
+
+    <!--Footer Links-->
+    <div class="container" style="display: none;">
+        <div class="row">
+
+            <!--First column-->
+            <div class="col-md-6 text-center">
+                <h5 class="title">Footer Content</h5>
+            </div>
+            <!--/.First column-->
+
+            <!--Second column-->
+            <div class="col-md-6 text-center">
+              <h5 class="title">Footer Content</h5>
+            </div>
+            <!--/.Second column-->
+        </div>
+    </div>
+    <!--/.Footer Links-->
+
+    <!--Copyright-->
+    <div class="footer-copyright">
+        <div class="container-fluid">
+            © 2018 Copyright Good Eats
+        </div>
+    </div>
+    <!--/.Copyright-->
+</footer>
+<!--/.Footer-->
