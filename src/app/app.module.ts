@@ -13,7 +13,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { ApiService } from './services/api.service';
 import { FoodService } from './services/food.service';
 import { LoaderComponent } from './loader/loader.component';
-import { CheckoutComponent } from './checkout/checkout.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
     AdminComponent,
     MenuComponent,
     LoaderComponent,
-    CheckoutComponent
+    CartComponent
   ],
   imports: [
     BrowserModule,
