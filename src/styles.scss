@@ -1,4 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.content {
+    padding-top: 100px;
+    // PX here needs to match footer height
+    min-height: calc(100vh - 90px);
+}
+
+footer {
+    position: relative !important;
+}
+
 .top-nav-collapse {
     background-color: #37474F !important;
 }
