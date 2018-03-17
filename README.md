@@ -1,4 +1,4 @@
-# Menu
+# Good Eats
 
 ![alt text](https://firebasestorage.googleapis.com/v0/b/briandentonnet.appspot.com/o/images%2Fscreencapture.png?alt=media&token=f15945ea-d57f-4732-bc1c-62e7be556177 "Screenshot")
 
